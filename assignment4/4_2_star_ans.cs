@@ -11,7 +11,76 @@ namespace star
             int size = 2 * (radius + 1);
 
             // ---------- TODO ----------
-
+            int 빈칸 = 2 * radius + (size/3);
+            int a, b;
+            int i=0;
+            while(i<size)
+            {
+                if(i==0)
+                {
+                    for(b= 0; b< 빈칸+1; b++)
+                    {
+                        Console.Write(" ");
+                    }
+                    Console.Write("*");
+                    for(b= 0; b<size/3-1; b++)
+                    {
+                        Console.Write(" ");
+                    }
+                    Console.WriteLine("*");
+                    i++;
+                    
+                }
+                else if(i==1 || i==size-1)
+                {
+                    Console.Write(" ");
+                    for(b= 0; b< 2* radius-1; b++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.Write(" ");
+                    for(b= 0; b< size/3; b++)
+                    {
+                        Console.Write(" ");
+                    }
+                    Console.Write("*");
+                    for(b= 0; b<size/3-1; b++)
+                    {
+                        Console.Write(" ");
+                    }
+                    Console.WriteLine("*");
+                    i++;
+                }
+                else if(i== (2*radius)/3 +1 || i == ((2*radius)/3*2+2))
+                {
+                    Console.Write("*");
+                    for(b= 0; b<2*radius; b++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for(b= 0; b<size; b++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.Write("\n");
+                    i++;
+                }
+                else
+                {
+                    Console.Write("*");
+                    for(b= 0; b< 빈칸; b++)
+                    {
+                    Console.Write(" ");
+                    }
+                    Console.Write("*");
+                    for(b= 0; b<size/3-1; b++)
+                    {
+                        Console.Write(" ");
+                    }
+                    Console.WriteLine("*");
+                    i++;
+                }
+            }
             // --------------------
         }
 
@@ -29,40 +98,3 @@ namespace star
         }
     }
 }
-
-
-/* example output
-Enter the radius: 
->> 5
-                *   *   
-  *********     *   *   
- *              *   *   
- *              *   *   
- *          ************
- *              *   *   
- *              *   *   
- *              *   *   
- *          ************
- *              *   *   
- *              *   *   
-  *********     *   *   
-
-*/
-
-/* example output (CHALLANGE)
-Enter the radius: 
->> 5
-                *   *  
-      *         *   *  
-   *     *      *   *  
-  *                    
-           ************
-               *   *   
- *             *   *   
-               *   *   
-           ************
-  *                    
-   *     *    *   *    
-      *       *   *    
-
-*/
