@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject Character;
     public GameObject CamObj;
     
-    const float CharacterSpeed = 3f;
+    const float CharacterSpeed = 5f;
 
     public int NowScore = 0;
 
